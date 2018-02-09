@@ -28,9 +28,9 @@ int main()
 	}
 	if (k == 1)
 	{
-		std::cout << "Please type your Angles and your side." << std::endl;
+		std::cout << "Please type your Angles then your side. (note: the first angle and your side must be A and a not mixed)" << std::endl;
 		std::cin >> a1 >> a2 >> s1;
-		double a3 = 180 - a1 - a2;
+		double a3 = (180 - a1 - a2);
 		double s2 = (s1*sin(a2))/sin(a1);
 		double s3 = (s1*sin(a3)) / sin(a1);
 		std::cout << "The Mising Parts are " << std::endl << "Angle 3 = " << a3 << " degrees" << std::endl <<
@@ -38,9 +38,20 @@ int main()
 	}
 	if (k == 2)
 	{
-		std::cout << "please type your known information in Angle ,side, angle," << std::endl;
-		std::cin >> a1 >> s1 >> a2;
+		std::cout << "please type your known information in Angle ,side, angle" << std::endl;
+		std::cin >> a1 >> s3 >> a2;
+		double a3 = 180 - a1 - a2;
+		double s1= (s3 / sin(a3))*sin(a1);
+		double s2 = (s3 / sin(a3))*sin(a2);
+		std::cout << "The Mising Parts are " << std::endl << "Angle 3 = " << a3 << " degrees" << std::endl <<
+			"Side 1 = " << s1 << std::endl << "Side 2 = " << s2;
+	}
+	if (k == 3)
+	{
+		std::cout << "please type your known information in Angle ,side, angle" << std::endl;
+		std::cin >> s1 >> a3 >> s2;
 	}
     return 0;
 }
 
+(s3/sin(a3*.0174533))/sin(a1*.0174533)
